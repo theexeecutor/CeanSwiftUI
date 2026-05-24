@@ -56,7 +56,7 @@
 		FD478F892FC0DBE70095D061 /* CheckoutDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F882FC0DBE70095D061 /* CheckoutDTO.swift */; };
 		FD478F8B2FC0DD8B0095D061 /* PaymentIntentDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F8A2FC0DD8B0095D061 /* PaymentIntentDTO.swift */; };
 		FD478F8D2FC0DDEA0095D061 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F8C2FC0DDEA0095D061 /* TransactionDTO.swift */; };
-		FD478F8F2FC0DEC30095D061 /* GetProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F8E2FC0DEC30095D061 /* GetProductUseCase.swift */; };
+		FD478F8F2FC0DEC30095D061 /* GetProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F8E2FC0DEC30095D061 /* GetProductsUseCase.swift */; };
 		FD478F912FC0DF4B0095D061 /* UpdateCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F902FC0DF4B0095D061 /* UpdateCartUseCase.swift */; };
 		FD478F942FC0E01A0095D061 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F932FC0E01A0095D061 /* ProductRepository.swift */; };
 		FD478F992FC0E57F0095D061 /* ProductFilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F982FC0E57F0095D061 /* ProductFilterCriteria.swift */; };
@@ -75,6 +75,10 @@
 		FD478FB52FC223A50095D061 /* CartRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB42FC223A50095D061 /* CartRemoteDataSource.swift */; };
 		FD478FB72FC223C40095D061 /* CartLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB62FC223C40095D061 /* CartLocalDataSource.swift */; };
 		FD478FB92FC2450B0095D061 /* CartSyncEngines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB82FC2450B0095D061 /* CartSyncEngines.swift */; };
+		FD478FBD2FC3272C0095D061 /* CheckoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FBC2FC3272C0095D061 /* CheckoutState.swift */; };
+		FD478FC32FC34E810095D061 /* UIErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC22FC34E810095D061 /* UIErrorPresentable.swift */; };
+		FD478FC52FC34EB80095D061 /* CheckoutError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC42FC34EB80095D061 /* CheckoutError.swift */; };
+		FD478FC72FC34F070095D061 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC62FC34F070095D061 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,7 +151,7 @@
 		FD478F882FC0DBE70095D061 /* CheckoutDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutDTO.swift; sourceTree = "<group>"; };
 		FD478F8A2FC0DD8B0095D061 /* PaymentIntentDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentIntentDTO.swift; sourceTree = "<group>"; };
 		FD478F8C2FC0DDEA0095D061 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
-		FD478F8E2FC0DEC30095D061 /* GetProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductUseCase.swift; sourceTree = "<group>"; };
+		FD478F8E2FC0DEC30095D061 /* GetProductsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsUseCase.swift; sourceTree = "<group>"; };
 		FD478F902FC0DF4B0095D061 /* UpdateCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCartUseCase.swift; sourceTree = "<group>"; };
 		FD478F932FC0E01A0095D061 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		FD478F982FC0E57F0095D061 /* ProductFilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterCriteria.swift; sourceTree = "<group>"; };
@@ -166,6 +170,10 @@
 		FD478FB42FC223A50095D061 /* CartRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRemoteDataSource.swift; sourceTree = "<group>"; };
 		FD478FB62FC223C40095D061 /* CartLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartLocalDataSource.swift; sourceTree = "<group>"; };
 		FD478FB82FC2450B0095D061 /* CartSyncEngines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSyncEngines.swift; sourceTree = "<group>"; };
+		FD478FBC2FC3272C0095D061 /* CheckoutState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutState.swift; sourceTree = "<group>"; };
+		FD478FC22FC34E810095D061 /* UIErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorPresentable.swift; sourceTree = "<group>"; };
+		FD478FC42FC34EB80095D061 /* CheckoutError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutError.swift; sourceTree = "<group>"; };
+		FD478FC62FC34F070095D061 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +289,7 @@
 				FD478F4F2FC03EE40095D061 /* Extensions */,
 				FD478F142FBFBA860095D061 /* Components */,
 				FD478F132FBFBA7D0095D061 /* Theme */,
+				FD478FC02FC34AB90095D061 /* Errors */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -513,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				FD478F642FC053B40095D061 /* APIClient.swift */,
+				FD478FC62FC34F070095D061 /* NetworkError.swift */,
 				FD478F952FC0E2C10095D061 /* Endpoints */,
 				FD478F662FC053B90095D061 /* Models */,
 			);
@@ -605,9 +615,8 @@
 		FD478F522FC04A230095D061 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F782FC0A5860095D061 /* LoginUseCase.swift */,
-				FD478F7A2FC0A5960095D061 /* LogoutUseCase.swift */,
-				FD478F8E2FC0DEC30095D061 /* GetProductUseCase.swift */,
+				FD478FBE2FC328070095D061 /* Auth */,
+				FD478FBF2FC3280C0095D061 /* Product */,
 				FD478FAC2FC1C1060095D061 /* GetCartUseCase.swift */,
 				FD478F902FC0DF4B0095D061 /* UpdateCartUseCase.swift */,
 			);
@@ -656,11 +665,13 @@
 		FD478F672FC053F80095D061 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				FD478FBB2FC3271D0095D061 /* Checkout */,
 				FD478F972FC0E56F0095D061 /* Product */,
 				FD478F6A2FC0552B0095D061 /* Cart.swift */,
 				FD478F6C2FC055350095D061 /* CartItem.swift */,
 				FD478F6E2FC0553F0095D061 /* Order.swift */,
 				FD478FA72FC1BC9D0095D061 /* Auth */,
+				FD478FC12FC34E0F0095D061 /* Errors */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -756,6 +767,47 @@
 				FD478F452FC03D570095D061 /* Local */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		FD478FBB2FC3271D0095D061 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				FD478FBC2FC3272C0095D061 /* CheckoutState.swift */,
+			);
+			path = Checkout;
+			sourceTree = "<group>";
+		};
+		FD478FBE2FC328070095D061 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F782FC0A5860095D061 /* LoginUseCase.swift */,
+				FD478F7A2FC0A5960095D061 /* LogoutUseCase.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FD478FBF2FC3280C0095D061 /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F8E2FC0DEC30095D061 /* GetProductsUseCase.swift */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		FD478FC02FC34AB90095D061 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				FD478FC22FC34E810095D061 /* UIErrorPresentable.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		FD478FC12FC34E0F0095D061 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				FD478FC42FC34EB80095D061 /* CheckoutError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -916,6 +968,7 @@
 				FD478F942FC0E01A0095D061 /* ProductRepository.swift in Sources */,
 				FD478F352FC039580095D061 /* PaymentGateway.swift in Sources */,
 				FD478F6D2FC055350095D061 /* CartItem.swift in Sources */,
+				FD478FBD2FC3272C0095D061 /* CheckoutState.swift in Sources */,
 				FD478F992FC0E57F0095D061 /* ProductFilterCriteria.swift in Sources */,
 				FD478F8B2FC0DD8B0095D061 /* PaymentIntentDTO.swift in Sources */,
 				FD478F712FC064A20095D061 /* User.swift in Sources */,
@@ -930,8 +983,10 @@
 				FD478F912FC0DF4B0095D061 /* UpdateCartUseCase.swift in Sources */,
 				FD478F6B2FC0552B0095D061 /* Cart.swift in Sources */,
 				FD478FA42FC1B7980095D061 /* PaymentView.swift in Sources */,
+				FD478FC72FC34F070095D061 /* NetworkError.swift in Sources */,
 				FD478F832FC0D95D0095D061 /* NetworkEngine.swift in Sources */,
-				FD478F8F2FC0DEC30095D061 /* GetProductUseCase.swift in Sources */,
+				FD478FC52FC34EB80095D061 /* CheckoutError.swift in Sources */,
+				FD478F8F2FC0DEC30095D061 /* GetProductsUseCase.swift in Sources */,
 				FD478F372FC03A080095D061 /* CustomPaymentGateway.swift in Sources */,
 				FD478F792FC0A5860095D061 /* LoginUseCase.swift in Sources */,
 				FD478F7E2FC0CAC90095D061 /* KeychainDataStore.swift in Sources */,
@@ -939,6 +994,7 @@
 				FD478F512FC040EF0095D061 /* ImageCacheManager.swift in Sources */,
 				FD478F632FC052EE0095D061 /* CardStyleModifier.swift in Sources */,
 				FD478F9D2FC0E7D60095D061 /* ProductRemoteDataSource.swift in Sources */,
+				FD478FC32FC34E810095D061 /* UIErrorPresentable.swift in Sources */,
 				FD478F772FC06AF50095D061 /* UserSessionManager.swift in Sources */,
 				FD478F402FC03BA00095D061 /* Logger.swift in Sources */,
 				FD478F572FC04D360095D061 /* String+Validation.swift in Sources */,
