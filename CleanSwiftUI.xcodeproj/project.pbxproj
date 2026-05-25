@@ -28,7 +28,7 @@
 		FD478F332FC0387B0095D061 /* ImageCacheType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F322FC0387B0095D061 /* ImageCacheType.swift */; };
 		FD478F352FC039580095D061 /* PaymentGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F342FC039580095D061 /* PaymentGateway.swift */; };
 		FD478F372FC03A080095D061 /* CustomPaymentGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F362FC03A080095D061 /* CustomPaymentGateway.swift */; };
-		FD478F402FC03BA00095D061 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F3F2FC03BA00095D061 /* Logger.swift */; };
+		FD478F402FC03BA00095D061 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F3F2FC03BA00095D061 /* LoggerService.swift */; };
 		FD478F422FC03D270095D061 /* AnalyticsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F412FC03D270095D061 /* AnalyticsEngine.swift */; };
 		FD478F512FC040EF0095D061 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F502FC040EF0095D061 /* ImageCacheManager.swift */; };
 		FD478F552FC04B120095D061 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F542FC04B120095D061 /* Constants.swift */; };
@@ -79,6 +79,9 @@
 		FD478FC32FC34E810095D061 /* UIErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC22FC34E810095D061 /* UIErrorPresentable.swift */; };
 		FD478FC52FC34EB80095D061 /* CheckoutError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC42FC34EB80095D061 /* CheckoutError.swift */; };
 		FD478FC72FC34F070095D061 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC62FC34F070095D061 /* NetworkError.swift */; };
+		FD478FCD2FC39D630095D061 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FCC2FC39D630095D061 /* RequestBuilder.swift */; };
+		FD478FD42FC451F40095D061 /* FeatureConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FD32FC451F40095D061 /* FeatureConfiguration.swift */; };
+		FD478FD72FC4550C0095D061 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FD62FC4550C0095D061 /* UIApplication+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +126,7 @@
 		FD478F322FC0387B0095D061 /* ImageCacheType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheType.swift; sourceTree = "<group>"; };
 		FD478F342FC039580095D061 /* PaymentGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentGateway.swift; sourceTree = "<group>"; };
 		FD478F362FC03A080095D061 /* CustomPaymentGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPaymentGateway.swift; sourceTree = "<group>"; };
-		FD478F3F2FC03BA00095D061 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FD478F3F2FC03BA00095D061 /* LoggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerService.swift; sourceTree = "<group>"; };
 		FD478F412FC03D270095D061 /* AnalyticsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEngine.swift; sourceTree = "<group>"; };
 		FD478F502FC040EF0095D061 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		FD478F542FC04B120095D061 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -174,6 +177,9 @@
 		FD478FC22FC34E810095D061 /* UIErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorPresentable.swift; sourceTree = "<group>"; };
 		FD478FC42FC34EB80095D061 /* CheckoutError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutError.swift; sourceTree = "<group>"; };
 		FD478FC62FC34F070095D061 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FD478FCC2FC39D630095D061 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		FD478FD32FC451F40095D061 /* FeatureConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureConfiguration.swift; sourceTree = "<group>"; };
+		FD478FD62FC4550C0095D061 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +293,7 @@
 			children = (
 				FD478F722FC067980095D061 /* State */,
 				FD478F4F2FC03EE40095D061 /* Extensions */,
+				FD478FD52FC454E40095D061 /* Modifiers */,
 				FD478F142FBFBA860095D061 /* Components */,
 				FD478F132FBFBA7D0095D061 /* Theme */,
 				FD478FC02FC34AB90095D061 /* Errors */,
@@ -327,12 +334,12 @@
 		FD478F152FBFBAC70095D061 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FD478FCF2FC3A7770095D061 /* Configuration */,
 				FD478F812FC0D93B0095D061 /* Network */,
 				FD478F752FC06AE30095D061 /* State */,
 				FD478F5A2FC051850095D061 /* Database */,
 				FD478F2C2FBFBFFB0095D061 /* Payment */,
 				FD478F2B2FBFBFF10095D061 /* ImageCache */,
-				FD478F2A2FBFBFB20095D061 /* Logger */,
 				FD478F292FBFBFA40095D061 /* Analytics */,
 				FD478F282FBFBF8A0095D061 /* Utilities */,
 				FD478F272FBFBF7F0095D061 /* Extensions */,
@@ -364,8 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				FD478FA02FC1B68C0095D061 /* DefaultLogger */,
-				FD478F7C2FC0CA430095D061 /* SecureStore */,
-				FD478F5D2FC052130095D061 /* LocalDB */,
+				FD478F5D2FC052130095D061 /* PersistanceStore */,
 				FD478F3A2FC03A340095D061 /* Image */,
 				FD478F392FC03A170095D061 /* Analytics */,
 				FD478F382FC03A0C0095D061 /* Payment */,
@@ -385,6 +391,7 @@
 		FD478F282FBFBF8A0095D061 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				FD478F3F2FC03BA00095D061 /* LoggerService.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -395,14 +402,6 @@
 				FD478F412FC03D270095D061 /* AnalyticsEngine.swift */,
 			);
 			path = Analytics;
-			sourceTree = "<group>";
-		};
-		FD478F2A2FBFBFB20095D061 /* Logger */ = {
-			isa = PBXGroup;
-			children = (
-				FD478F3F2FC03BA00095D061 /* Logger.swift */,
-			);
-			path = Logger;
 			sourceTree = "<group>";
 		};
 		FD478F2B2FBFBFF10095D061 /* ImageCache */ = {
@@ -434,9 +433,9 @@
 		FD478F2E2FBFC0880095D061 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FD478FBA2FC245460095D061 /* DataSources */,
 				FD478F442FC03D4C0095D061 /* Network */,
-				FD478F432FC03D3F0095D061 /* Repositories */,
+				FD478F432FC03D3F0095D061 /* RepositoryImpl */,
+				FD478FBA2FC245460095D061 /* DataSources */,
 				FD478F922FC0DF700095D061 /* SyncEngines */,
 			);
 			path = Data;
@@ -510,21 +509,22 @@
 			path = Payment;
 			sourceTree = "<group>";
 		};
-		FD478F432FC03D3F0095D061 /* Repositories */ = {
+		FD478F432FC03D3F0095D061 /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
 				FD478F9A2FC0E7730095D061 /* ListProductRepository.swift */,
 			);
-			path = Repositories;
+			path = RepositoryImpl;
 			sourceTree = "<group>";
 		};
 		FD478F442FC03D4C0095D061 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				FD478F642FC053B40095D061 /* APIClient.swift */,
-				FD478FC62FC34F070095D061 /* NetworkError.swift */,
+				FD478FCC2FC39D630095D061 /* RequestBuilder.swift */,
+				FD478FCE2FC39D760095D061 /* Interceptor */,
 				FD478F952FC0E2C10095D061 /* Endpoints */,
-				FD478F662FC053B90095D061 /* Models */,
+				FD478F662FC053B90095D061 /* DTOs */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -607,7 +607,7 @@
 		FD478F4F2FC03EE40095D061 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F622FC052EE0095D061 /* CardStyleModifier.swift */,
+				FD478FD62FC4550C0095D061 /* UIApplication+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -641,25 +641,22 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
-		FD478F5D2FC052130095D061 /* LocalDB */ = {
+		FD478F5D2FC052130095D061 /* PersistanceStore */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F5E2FC052270095D061 /* CoreDataStack.swift */,
+				FD478FD02FC44E240095D061 /* CoreData */,
+				FD478FD12FC44E2E0095D061 /* Keychain */,
 			);
-			path = LocalDB;
+			path = PersistanceStore;
 			sourceTree = "<group>";
 		};
-		FD478F662FC053B90095D061 /* Models */ = {
+		FD478F662FC053B90095D061 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F842FC0DB830095D061 /* ProductDTO.swift */,
-				FD478F862FC0DBC10095D061 /* PendingOrderDTO.swift */,
-				FD478F882FC0DBE70095D061 /* CheckoutDTO.swift */,
-				FD478F8A2FC0DD8B0095D061 /* PaymentIntentDTO.swift */,
-				FD478F8C2FC0DDEA0095D061 /* TransactionDTO.swift */,
-				FD478FB22FC1E4DB0095D061 /* CartDTO.swift */,
+				FD478FC92FC39A0D0095D061 /* Response */,
+				FD478FC82FC399FE0095D061 /* Request */,
 			);
-			path = Models;
+			path = DTOs;
 			sourceTree = "<group>";
 		};
 		FD478F672FC053F80095D061 /* Entities */ = {
@@ -692,18 +689,11 @@
 			path = State;
 			sourceTree = "<group>";
 		};
-		FD478F7C2FC0CA430095D061 /* SecureStore */ = {
-			isa = PBXGroup;
-			children = (
-				FD478F7D2FC0CAC90095D061 /* KeychainDataStore.swift */,
-			);
-			path = SecureStore;
-			sourceTree = "<group>";
-		};
 		FD478F812FC0D93B0095D061 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				FD478F822FC0D95D0095D061 /* NetworkEngine.swift */,
+				FD478FC62FC34F070095D061 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -808,6 +798,73 @@
 				FD478FC42FC34EB80095D061 /* CheckoutError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		FD478FC82FC399FE0095D061 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F882FC0DBE70095D061 /* CheckoutDTO.swift */,
+				FD478F8A2FC0DD8B0095D061 /* PaymentIntentDTO.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		FD478FC92FC39A0D0095D061 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F842FC0DB830095D061 /* ProductDTO.swift */,
+				FD478F862FC0DBC10095D061 /* PendingOrderDTO.swift */,
+				FD478F8C2FC0DDEA0095D061 /* TransactionDTO.swift */,
+				FD478FB22FC1E4DB0095D061 /* CartDTO.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		FD478FCE2FC39D760095D061 /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
+		FD478FCF2FC3A7770095D061 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FD478FD32FC451F40095D061 /* FeatureConfiguration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FD478FD02FC44E240095D061 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FD478FD22FC44E3D0095D061 /* Entities */,
+				FD478F5E2FC052270095D061 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FD478FD12FC44E2E0095D061 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F7D2FC0CAC90095D061 /* KeychainDataStore.swift */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		FD478FD22FC44E3D0095D061 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FD478FD52FC454E40095D061 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F622FC052EE0095D061 /* CardStyleModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -965,6 +1022,7 @@
 				FD478FA62FC1B7AE0095D061 /* StripePaymentView.swift in Sources */,
 				FD478FB12FC1C84D0095D061 /* GetCartEndpoint.swift in Sources */,
 				FD478F072FBF9F300095D061 /* AppDelegate.swift in Sources */,
+				FD478FD42FC451F40095D061 /* FeatureConfiguration.swift in Sources */,
 				FD478F942FC0E01A0095D061 /* ProductRepository.swift in Sources */,
 				FD478F352FC039580095D061 /* PaymentGateway.swift in Sources */,
 				FD478F6D2FC055350095D061 /* CartItem.swift in Sources */,
@@ -987,6 +1045,7 @@
 				FD478F832FC0D95D0095D061 /* NetworkEngine.swift in Sources */,
 				FD478FC52FC34EB80095D061 /* CheckoutError.swift in Sources */,
 				FD478F8F2FC0DEC30095D061 /* GetProductsUseCase.swift in Sources */,
+				FD478FD72FC4550C0095D061 /* UIApplication+Extensions.swift in Sources */,
 				FD478F372FC03A080095D061 /* CustomPaymentGateway.swift in Sources */,
 				FD478F792FC0A5860095D061 /* LoginUseCase.swift in Sources */,
 				FD478F7E2FC0CAC90095D061 /* KeychainDataStore.swift in Sources */,
@@ -996,7 +1055,7 @@
 				FD478F9D2FC0E7D60095D061 /* ProductRemoteDataSource.swift in Sources */,
 				FD478FC32FC34E810095D061 /* UIErrorPresentable.swift in Sources */,
 				FD478F772FC06AF50095D061 /* UserSessionManager.swift in Sources */,
-				FD478F402FC03BA00095D061 /* Logger.swift in Sources */,
+				FD478F402FC03BA00095D061 /* LoggerService.swift in Sources */,
 				FD478F572FC04D360095D061 /* String+Validation.swift in Sources */,
 				FD478FB92FC2450B0095D061 /* CartSyncEngines.swift in Sources */,
 				FD478F332FC0387B0095D061 /* ImageCacheType.swift in Sources */,
@@ -1005,6 +1064,7 @@
 				FD478F5F2FC052270095D061 /* CoreDataStack.swift in Sources */,
 				FD478F252FBFBEA80095D061 /* CachedAsyncImage.swift in Sources */,
 				FD478F852FC0DB830095D061 /* ProductDTO.swift in Sources */,
+				FD478FCD2FC39D630095D061 /* RequestBuilder.swift in Sources */,
 				FD478F422FC03D270095D061 /* AnalyticsEngine.swift in Sources */,
 				FD478F612FC052880095D061 /* FirebaseAnalyticsEngine.swift in Sources */,
 				FD478F222FBFBD080095D061 /* MyInputField.swift in Sources */,

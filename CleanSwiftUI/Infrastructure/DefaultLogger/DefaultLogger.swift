@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DefaultLogger: Logger {
+class DefaultLogger: LoggerService {
     
     func log(_ message: String) {
         
