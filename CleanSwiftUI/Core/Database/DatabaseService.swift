@@ -8,6 +8,16 @@
 import Foundation
 
 protocol DatabaseService {
-    func fetchAll<T>() async throws -> [T]
-    func save() async throws
+    associatedtype Model
+    
+    func save(_ object: Model) async throws
+    func fetchAll(predicate: Predicate<Model>?) async throws -> [Model]
+    func delete(_ object: Model) async throws
+    func deleteAll(predicate: Predicate<Model>?) async throws
+}
+
+
+enum DatabaseError {
+    case modelError
+    case decodingError
 }

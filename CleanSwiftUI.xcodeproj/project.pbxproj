@@ -82,6 +82,13 @@
 		FD478FCD2FC39D630095D061 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FCC2FC39D630095D061 /* RequestBuilder.swift */; };
 		FD478FD42FC451F40095D061 /* FeatureConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FD32FC451F40095D061 /* FeatureConfiguration.swift */; };
 		FD478FD72FC4550C0095D061 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FD62FC4550C0095D061 /* UIApplication+Extensions.swift */; };
+		FD4790012FC5D3D50095D061 /* CoreDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4790002FC5D3D50095D061 /* CoreDataStorage.swift */; };
+		FD4790082FC618AA0095D061 /* Cart+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4790022FC618AA0095D061 /* Cart+CoreDataClass.swift */; };
+		FD4790092FC618AA0095D061 /* Cart+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4790032FC618AA0095D061 /* Cart+CoreDataProperties.swift */; };
+		FD47900A2FC618AA0095D061 /* CartItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4790042FC618AA0095D061 /* CartItem+CoreDataClass.swift */; };
+		FD47900B2FC618AA0095D061 /* CartItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4790052FC618AA0095D061 /* CartItem+CoreDataProperties.swift */; };
+		FD47900C2FC618AA0095D061 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4790062FC618AA0095D061 /* Product+CoreDataClass.swift */; };
+		FD47900D2FC618AA0095D061 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4790072FC618AA0095D061 /* Product+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +187,13 @@
 		FD478FCC2FC39D630095D061 /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		FD478FD32FC451F40095D061 /* FeatureConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureConfiguration.swift; sourceTree = "<group>"; };
 		FD478FD62FC4550C0095D061 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		FD4790002FC5D3D50095D061 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		FD4790022FC618AA0095D061 /* Cart+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FD4790032FC618AA0095D061 /* Cart+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FD4790042FC618AA0095D061 /* CartItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FD4790052FC618AA0095D061 /* CartItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FD4790062FC618AA0095D061 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FD4790072FC618AA0095D061 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,10 +365,9 @@
 		FD478F162FBFBAFE0095D061 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F1B2FBFBC4F0095D061 /* Funky Glitz.ttf */,
-				FD478EEE2FBF9BF40095D061 /* Assets.xcassets */,
-				FD478F192FBFBB540095D061 /* Colors.xcassets */,
-				FD478F172FBFBB3A0095D061 /* preview.json */,
+				FD478FD92FC575980095D061 /* Fonts */,
+				FD478FDA2FC575A00095D061 /* Assets */,
+				FD478FDB2FC575A90095D061 /* Jsons */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -840,6 +853,7 @@
 			children = (
 				FD478FD22FC44E3D0095D061 /* Entities */,
 				FD478F5E2FC052270095D061 /* CoreDataStack.swift */,
+				FD4790002FC5D3D50095D061 /* CoreDataStorage.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -855,6 +869,12 @@
 		FD478FD22FC44E3D0095D061 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				FD4790022FC618AA0095D061 /* Cart+CoreDataClass.swift */,
+				FD4790032FC618AA0095D061 /* Cart+CoreDataProperties.swift */,
+				FD4790042FC618AA0095D061 /* CartItem+CoreDataClass.swift */,
+				FD4790052FC618AA0095D061 /* CartItem+CoreDataProperties.swift */,
+				FD4790062FC618AA0095D061 /* Product+CoreDataClass.swift */,
+				FD4790072FC618AA0095D061 /* Product+CoreDataProperties.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -865,6 +885,31 @@
 				FD478F622FC052EE0095D061 /* CardStyleModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		FD478FD92FC575980095D061 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F1B2FBFBC4F0095D061 /* Funky Glitz.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FD478FDA2FC575A00095D061 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FD478EEE2FBF9BF40095D061 /* Assets.xcassets */,
+				FD478F192FBFBB540095D061 /* Colors.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FD478FDB2FC575A90095D061 /* Jsons */ = {
+			isa = PBXGroup;
+			children = (
+				FD478F172FBFBB3A0095D061 /* preview.json */,
+			);
+			path = Jsons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1059,6 +1104,7 @@
 				FD478F572FC04D360095D061 /* String+Validation.swift in Sources */,
 				FD478FB92FC2450B0095D061 /* CartSyncEngines.swift in Sources */,
 				FD478F332FC0387B0095D061 /* ImageCacheType.swift in Sources */,
+				FD4790012FC5D3D50095D061 /* CoreDataStorage.swift in Sources */,
 				FD478F5C2FC051920095D061 /* DatabaseService.swift in Sources */,
 				FD478F0D2FBFB4100095D061 /* AppCoordinator.swift in Sources */,
 				FD478F5F2FC052270095D061 /* CoreDataStack.swift in Sources */,
@@ -1069,6 +1115,12 @@
 				FD478F612FC052880095D061 /* FirebaseAnalyticsEngine.swift in Sources */,
 				FD478F222FBFBD080095D061 /* MyInputField.swift in Sources */,
 				FD478F9B2FC0E7730095D061 /* ListProductRepository.swift in Sources */,
+				FD4790082FC618AA0095D061 /* Cart+CoreDataClass.swift in Sources */,
+				FD4790092FC618AA0095D061 /* Cart+CoreDataProperties.swift in Sources */,
+				FD47900A2FC618AA0095D061 /* CartItem+CoreDataClass.swift in Sources */,
+				FD47900B2FC618AA0095D061 /* CartItem+CoreDataProperties.swift in Sources */,
+				FD47900C2FC618AA0095D061 /* Product+CoreDataClass.swift in Sources */,
+				FD47900D2FC618AA0095D061 /* Product+CoreDataProperties.swift in Sources */,
 				FD478F552FC04B120095D061 /* Constants.swift in Sources */,
 				FD478FAD2FC1C1060095D061 /* GetCartUseCase.swift in Sources */,
 				FD478F742FC067A30095D061 /* AppUIState.swift in Sources */,
@@ -1258,7 +1310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -1291,7 +1343,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
