@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="24G624" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Cart" representedClassName="Cart" syncable="YES">
+    <entity name="CartEntity" representedClassName="CartEntity" syncable="YES">
         <attribute name="id" attributeType="String"/>
         <attribute name="timeStamp" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="cartItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CartItem"/>
+        <relationship name="cartItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CartItemEntity"/>
     </entity>
-    <entity name="CartItem" representedClassName="CartItem" syncable="YES">
+    <entity name="CartItemEntity" representedClassName="CartItemEntity" syncable="YES">
         <attribute name="count" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="id" optional="YES" attributeType="String"/>
-        <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product"/>
+        <attribute name="id" attributeType="String"/>
+        <relationship name="product" maxCount="1" deletionRule="Nullify" destinationEntity="ProductEntity"/>
     </entity>
-    <entity name="Product" representedClassName="Product" syncable="YES">
+    <entity name="ProductEntity" representedClassName="ProductEntity" syncable="YES">
         <attribute name="id" attributeType="String"/>
         <attribute name="price" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="title" optional="YES" attributeType="String"/>

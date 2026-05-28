@@ -8,8 +8,11 @@
 import Foundation
 
 struct GetCartUseCase {
-    let repository: 
+    let repository: CartRepository
+    init(_ repository: CartRepository) {
+        self.repository = repository
+    }
     func execute() async throws-> Cart {
-        
+        Cart()
     }
 }

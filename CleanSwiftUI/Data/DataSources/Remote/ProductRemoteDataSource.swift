@@ -15,7 +15,8 @@ struct ProductRemoteDataSourceImpl: ProductRemoteDataSource {
     let apiClient: NetworkEngine
     
     func fetchProducts(criteria: ProductFilterCriteria) async throws -> [Product] {
-        let endpoint = 
-        apiClient.request(endpoint: <#T##any APIEndpoint#>)
+        
+        
+        return []
     }
 }

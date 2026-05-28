@@ -7,4 +7,6 @@
 
 import Foundation
 
-struct Pa
+struct PendingOrderDTO {
+    
+}

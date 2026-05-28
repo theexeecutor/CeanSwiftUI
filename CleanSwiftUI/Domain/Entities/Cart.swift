@@ -10,6 +10,13 @@ import Foundation
 class Cart: Identifiable {
     var id: String = UUID().uuidString
     var item: [CartItem] = []
+    var timeStamp: Date = Date()
+    
+    init(id: String, item: [CartItem], timeStamp: Date) {
+        self.id = id
+        self.item = item
+        self.timeStamp = timeStamp
+    }
 }
 
 extension Cart: Hashable, Equatable {

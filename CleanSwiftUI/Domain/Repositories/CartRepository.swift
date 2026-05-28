@@ -10,5 +10,5 @@ import Foundation
 
 protocol CartRepository {
     func getCart() async throws -> Cart
-    func updateCart(_ item: CartItem) async throws
+    func updateCartItem(_ item: CartItem) async throws -> Cart
 }

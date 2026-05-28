@@ -7,17 +7,28 @@
 
 import Foundation
 
+protocol Persistable: NSObject {
+    var id: String { get }
+}
+
 protocol DatabaseService {
-    associatedtype Model
-    
-    func save(_ object: Model) async throws
-    func fetchAll(predicate: Predicate<Model>?) async throws -> [Model]
-    func delete(_ object: Model) async throws
-    func deleteAll(predicate: Predicate<Model>?) async throws
+    func save<T: Persistable>(_ object: T) async throws
+    @available(iOS 17, *)
+    func fetchAll<T: Persistable>(predicate: Predicate<T>?) async throws -> [T]
+    func delete<T: Persistable>(_ object: T) async throws
+    @available(iOS 17, *)
+    func deleteAll<T: Persistable>(predicate: Predicate<T>?) async throws
 }
 
 
-enum DatabaseError {
+enum DatabaseError: Error {
     case modelError
     case decodingError
+}
+
+enum DatabaseMergePolicy {
+    case memory
+    case disk
+    case override
+    case none
 }

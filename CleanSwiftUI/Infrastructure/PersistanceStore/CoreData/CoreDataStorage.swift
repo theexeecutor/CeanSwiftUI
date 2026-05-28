@@ -8,33 +8,66 @@
 import CoreData
 
 final class CoreDataStorage: DatabaseService {
-    typealias Model = NSManagedObject
-    
-    var coreDataStack: CoreDataStack
+    private let coreDataStack: CoreDataStack
     init(coreDataStack: CoreDataStack = .shared) {
         self.coreDataStack = coreDataStack
     }
     
-    
-    func save(_ object: NSManagedObject) async throws {
-        if object.managedObjectContext !== coreDataStack.context {
-            
+    // add parameter for merge policy
+    func save<T: Persistable>(_ object: T) async throws {
+        guard let object = object as? NSManagedObject else { throw DatabaseError.modelError }
+        let context = object.managedObjectContext ?? coreDataStack.context
+        do {
+            try context.save()
+        } catch {
+            let userInfo = (error as NSError).userInfo
+            // handling merge conflicts
+            if let conflicts = userInfo[NSPersistentStoreSaveConflictsErrorKey] as? [NSMergeConflict] {
+                for conflict in conflicts {
+                    // handle each one by one
+                }
+            } else {
+                throw error
+            }
         }
-        
-        
     }
     
-    func fetchAll(predicate: Predicate<NSManagedObject>) async throws -> [NSManagedObject] {
+    @available(iOS 17, *)
+    func fetchAll<T: Persistable>(predicate: Predicate<T>?) async throws -> [T] {
+        guard let T = T.self as? NSManagedObject.Type else { throw DatabaseError.modelError }
         
+        let request = T.fetchRequest()
+        request.returnsObjectsAsFaults = false
         
-        return []
+        if let predicate {
+            let nsPredicate = NSPredicate(predicate)
+            request.predicate = nsPredicate
+        }
+        let result = try coreDataStack.context.fetch(request) as! [T]
+        
+        return result
     }
     
-    func delete(_ object: NSManagedObject) async throws {
-        
+    func delete<T: Persistable>(_ object: T) async throws {
+        guard let object = object as? NSManagedObject else { throw DatabaseError.modelError }
+        let context = object.managedObjectContext ?? coreDataStack.context
+        context.delete(object)
+        try context.save()
     }
     
-    func deleteAll(predicate: Predicate<NSManagedObject>? = nil) async throws {
-        
+    @available(iOS 17, *)
+    func deleteAll<T: Persistable>(predicate: Predicate<T>? = nil) async throws {
+        guard let T = T.self as? NSManagedObject.Type else { throw DatabaseError.modelError }
+        var request = T.fetchRequest()
+        let context = coreDataStack.context
+        if let predicate {
+            let nsPredicate = NSPredicate(predicate)
+            request.predicate = nsPredicate
+        }
+        let result = try context.fetch(request) as! [NSManagedObject]
+        for item in result {
+            context.delete(item)
+        }
+        try context.save()
     }
 }
