@@ -12,7 +12,7 @@ struct GetCartUseCase {
     init(_ repository: CartRepository) {
         self.repository = repository
     }
-    func execute() async throws-> Cart {
-        Cart()
+    func execute() -> AsyncThrowingStream<Cart, Error> {
+        repository.getCart()
     }
 }

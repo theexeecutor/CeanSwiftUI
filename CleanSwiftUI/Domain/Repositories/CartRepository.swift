@@ -9,6 +9,6 @@ import Foundation
 
 
 protocol CartRepository {
-    func getCart() async throws -> Cart
+    func getCart() -> AsyncThrowingStream<Cart, Error>
     func updateCartItem(_ item: CartItem) async throws -> Cart
 }

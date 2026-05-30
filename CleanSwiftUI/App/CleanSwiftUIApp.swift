@@ -18,12 +18,14 @@ struct CleanSwiftUIApp: App {
     
     init() {
         _router = StateObject(wrappedValue: DIContainer.shared.makeAppCoordinator())
+        _userSession = StateObject(wrappedValue: DIContainer.shared.makeUserSession())
     }
 
     var body: some Scene {
         WindowGroup {
             AppRootView(session: container.makeUserSession())
                 .environmentObject(router)
+                .environmentObject(container)
         }
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct CartSummeryView: View {
     @State var viewModel: CartSummeryVM
+    @EnvironmentObject var container: DIContainer
     
     var body: some View {
         
@@ -18,7 +19,8 @@ struct CartSummeryView: View {
 
 
 #Preview {
-    CartSummeryView(viewModel: CartSummeryVM(cart: Cart(),
-                                             getCartUseCase: GetCartUseCase(<#T##repository: any CartRepository##any CartRepository#>),
-                                                                            updateCartItemUseCase: <#T##UpdateCartItemUseCase#>))
+    let repository = DIContainer.shared.makeCartRepository()
+    CartSummeryView(viewModel: CartSummeryVM(cart: Cart(id: "Dummy", item: [], timeStamp: Date()),
+                                             getCartUseCase: GetCartUseCase(repository),
+                                             updateCartItemUseCase: UpdateCartItemUseCase(repository: repository)))
 }

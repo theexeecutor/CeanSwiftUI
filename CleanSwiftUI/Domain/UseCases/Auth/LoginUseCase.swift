@@ -15,6 +15,6 @@ protocol LoginUseCase {
 
 struct LoginUseCaseImpl: LoginUseCase {
     func execute(credentials: LoginCredential) async throws -> User {
-        
+        return User(id: "dummy", name: "User", role: "admin")
     }
 }

@@ -20,6 +20,7 @@ extension CartEntity: Persistable {
     
     // to entity
     func toEntity() -> Cart {
-        Cart(id: id, item: cartItems})
+        let cartItems = self.cartItems?.allObjects as? [CartItemEntity] ?? []
+        return Cart(id: id, item: cartItems.map({ $0.toEntity() }), timeStamp: timeStamp)
     }
 }

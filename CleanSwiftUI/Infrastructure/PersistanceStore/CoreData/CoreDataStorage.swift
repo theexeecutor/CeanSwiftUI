@@ -58,7 +58,7 @@ final class CoreDataStorage: DatabaseService {
     @available(iOS 17, *)
     func deleteAll<T: Persistable>(predicate: Predicate<T>? = nil) async throws {
         guard let T = T.self as? NSManagedObject.Type else { throw DatabaseError.modelError }
-        var request = T.fetchRequest()
+        let request = T.fetchRequest()
         let context = coreDataStack.context
         if let predicate {
             let nsPredicate = NSPredicate(predicate)

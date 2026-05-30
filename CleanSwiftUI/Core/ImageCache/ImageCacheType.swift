@@ -8,7 +8,7 @@
 import Foundation
 import UIKit.UIImage
 
-protocol ImageCacheType {
+protocol ImageCacheType: ObservableObject {
     func image(for url: String) -> UIImage?
     func saveImage(_ image: UIImage, for url: String)
 }

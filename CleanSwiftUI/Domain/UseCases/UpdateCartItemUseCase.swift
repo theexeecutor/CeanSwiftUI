@@ -9,11 +9,11 @@ import Foundation
 
 
 struct UpdateCartItemUseCase {
-    private let repository: CartRepository
+    let repository: CartRepository
     
     func execute(_ cart: CartItem) async throws -> Cart {
         
         
-        return Cart()
+        return Cart(id: "", item: [], timeStamp: Date())
     }
 }

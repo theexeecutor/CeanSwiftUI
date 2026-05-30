@@ -35,7 +35,7 @@ final class CartLocalDataSourceImpl: CartLocalDataSource {
     func saveCartItem(_ item: CartItem) async throws -> Cart {
         if #available(iOS 17.0, *) {
             let cart = try await getORCreateNewCart()
-            let items = cart.cartItems?.allObjects as! [CartItemEntity]
+            var items = cart.cartItems?.allObjects as! [CartItemEntity]
             if let first = items.first(where: { $0.id == item.id }) {
                 if item.count == 0 {
                     try await localDatabase.delete(first)
@@ -54,7 +54,10 @@ final class CartLocalDataSourceImpl: CartLocalDataSource {
                 entity.count = Int16(item.count)
                 try await localDatabase.save(entity)
                 cart.addToCartItems(entity)
+                items = cart.cartItems?.allObjects as! [CartItemEntity]
             }
+            
+            return Cart(id: cart.id, item: items.map({ $0.toEntity() }), timeStamp: cart.timeStamp)
         } else {
             fatalError()
         }

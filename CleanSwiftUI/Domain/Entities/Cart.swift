@@ -11,6 +11,9 @@ class Cart: Identifiable {
     var id: String = UUID().uuidString
     var item: [CartItem] = []
     var timeStamp: Date = Date()
+    // create timestamp
+    // update timestamp
+    // both mostly will use for resolve merge conflicts.
     
     init(id: String, item: [CartItem], timeStamp: Date) {
         self.id = id

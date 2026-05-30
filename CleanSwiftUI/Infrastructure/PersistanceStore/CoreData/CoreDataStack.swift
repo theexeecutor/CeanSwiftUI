@@ -18,7 +18,7 @@ final class CoreDataStack {
     init(isInMemory: Bool) {
         let instance = NSPersistentContainer(name: "CleanSwiftUI")
         instance.loadPersistentStores { description, error in
-            guard error != nil else { fatalError("Couldn't find the DataModel file") }
+            guard error == nil else { fatalError("Couldn't find the DataModel file") }
             
             if isInMemory {
                 description.type = NSInMemoryStoreType

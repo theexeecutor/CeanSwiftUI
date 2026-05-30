@@ -17,5 +17,6 @@ struct ProductLocalDataSourceImpl: ProductLocalDataSource {
     
     func fetchProducts(criteria: ProductFilterCriteria) async throws -> [Product] {
         // fetch database item
+        return []
     }
 }

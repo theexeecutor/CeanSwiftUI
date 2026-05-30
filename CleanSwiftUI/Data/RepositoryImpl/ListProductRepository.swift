@@ -11,6 +11,6 @@ class ListProductRepository: ProductRepository {
     
 
     func fetchProducts(criteria: ProductFilterCriteria) async throws -> [Product] {
-        
+        return []
     }
 }

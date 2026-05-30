@@ -74,7 +74,7 @@
 		FD478FB32FC1E4DB0095D061 /* CartDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB22FC1E4DB0095D061 /* CartDTO.swift */; };
 		FD478FB52FC223A50095D061 /* CartRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB42FC223A50095D061 /* CartRemoteDataSource.swift */; };
 		FD478FB72FC223C40095D061 /* CartLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB62FC223C40095D061 /* CartLocalDataSource.swift */; };
-		FD478FB92FC2450B0095D061 /* CartSyncEngines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB82FC2450B0095D061 /* CartSyncEngines.swift */; };
+		FD478FB92FC2450B0095D061 /* CartSyncEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FB82FC2450B0095D061 /* CartSyncEngine.swift */; };
 		FD478FBD2FC3272C0095D061 /* CheckoutState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FBC2FC3272C0095D061 /* CheckoutState.swift */; };
 		FD478FC32FC34E810095D061 /* UIErrorPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC22FC34E810095D061 /* UIErrorPresentable.swift */; };
 		FD478FC52FC34EB80095D061 /* CheckoutError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FC42FC34EB80095D061 /* CheckoutError.swift */; };
@@ -92,6 +92,8 @@
 		FDEAEC452FC61E240016CCB8 /* CartSummeryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC442FC61E240016CCB8 /* CartSummeryView.swift */; };
 		FDEAEC472FC61E310016CCB8 /* CartSummeryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC462FC61E310016CCB8 /* CartSummeryVM.swift */; };
 		FDEAEC492FC6272A0016CCB8 /* CartRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC482FC6272A0016CCB8 /* CartRepositoryImpl.swift */; };
+		FDEAEC4B2FCB0D040016CCB8 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC4A2FCB0D040016CCB8 /* ProductListView.swift */; };
+		FDEAEC4D2FCB0D130016CCB8 /* ProductListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC4C2FCB0D130016CCB8 /* ProductListVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,7 +184,7 @@
 		FD478FB22FC1E4DB0095D061 /* CartDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDTO.swift; sourceTree = "<group>"; };
 		FD478FB42FC223A50095D061 /* CartRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRemoteDataSource.swift; sourceTree = "<group>"; };
 		FD478FB62FC223C40095D061 /* CartLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartLocalDataSource.swift; sourceTree = "<group>"; };
-		FD478FB82FC2450B0095D061 /* CartSyncEngines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSyncEngines.swift; sourceTree = "<group>"; };
+		FD478FB82FC2450B0095D061 /* CartSyncEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSyncEngine.swift; sourceTree = "<group>"; };
 		FD478FBC2FC3272C0095D061 /* CheckoutState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutState.swift; sourceTree = "<group>"; };
 		FD478FC22FC34E810095D061 /* UIErrorPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIErrorPresentable.swift; sourceTree = "<group>"; };
 		FD478FC42FC34EB80095D061 /* CheckoutError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutError.swift; sourceTree = "<group>"; };
@@ -200,6 +202,8 @@
 		FDEAEC442FC61E240016CCB8 /* CartSummeryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSummeryView.swift; sourceTree = "<group>"; };
 		FDEAEC462FC61E310016CCB8 /* CartSummeryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSummeryVM.swift; sourceTree = "<group>"; };
 		FDEAEC482FC6272A0016CCB8 /* CartRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepositoryImpl.swift; sourceTree = "<group>"; };
+		FDEAEC4A2FCB0D040016CCB8 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		FDEAEC4C2FCB0D130016CCB8 /* ProductListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,6 +565,7 @@
 		FD478F462FC03E540095D061 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FDEAEC4A2FCB0D040016CCB8 /* ProductListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,6 +573,7 @@
 		FD478F472FC03E5A0095D061 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FDEAEC4C2FCB0D130016CCB8 /* ProductListVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -723,7 +729,7 @@
 		FD478F922FC0DF700095D061 /* SyncEngines */ = {
 			isa = PBXGroup;
 			children = (
-				FD478FB82FC2450B0095D061 /* CartSyncEngines.swift */,
+				FD478FB82FC2450B0095D061 /* CartSyncEngine.swift */,
 			);
 			path = SyncEngines;
 			sourceTree = "<group>";
@@ -1105,10 +1111,12 @@
 				FD478F6B2FC0552B0095D061 /* Cart.swift in Sources */,
 				FD478FA42FC1B7980095D061 /* PaymentView.swift in Sources */,
 				FD478FC72FC34F070095D061 /* NetworkError.swift in Sources */,
+				FDEAEC4D2FCB0D130016CCB8 /* ProductListVM.swift in Sources */,
 				FD478F832FC0D95D0095D061 /* NetworkEngine.swift in Sources */,
 				FD478FC52FC34EB80095D061 /* CheckoutError.swift in Sources */,
 				FD478F8F2FC0DEC30095D061 /* GetProductsUseCase.swift in Sources */,
 				FD478FD72FC4550C0095D061 /* UIApplication+Extensions.swift in Sources */,
+				FDEAEC4B2FCB0D040016CCB8 /* ProductListView.swift in Sources */,
 				FD478F372FC03A080095D061 /* CustomPaymentGateway.swift in Sources */,
 				FD478F792FC0A5860095D061 /* LoginUseCase.swift in Sources */,
 				FD478F7E2FC0CAC90095D061 /* KeychainDataStore.swift in Sources */,
@@ -1120,7 +1128,7 @@
 				FD478F772FC06AF50095D061 /* UserSessionManager.swift in Sources */,
 				FD478F402FC03BA00095D061 /* LoggerService.swift in Sources */,
 				FD478F572FC04D360095D061 /* String+Validation.swift in Sources */,
-				FD478FB92FC2450B0095D061 /* CartSyncEngines.swift in Sources */,
+				FD478FB92FC2450B0095D061 /* CartSyncEngine.swift in Sources */,
 				FD478F332FC0387B0095D061 /* ImageCacheType.swift in Sources */,
 				FD4790012FC5D3D50095D061 /* CoreDataStorage.swift in Sources */,
 				FD478F5C2FC051920095D061 /* DatabaseService.swift in Sources */,
@@ -1313,7 +1321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1347,7 +1355,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

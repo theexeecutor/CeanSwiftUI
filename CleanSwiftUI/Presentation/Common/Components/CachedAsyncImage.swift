@@ -12,7 +12,7 @@ struct CachedAsyncImage: View {
     let url: URL
     
     // Grabs the cache manager directly from the SwiftUI Environment
-    @EnvironmentObject private var cacheManager: ImageCacheManager
+    @EnvironmentObject private var cacheManager: ImageCacheManager // Causing Error with protocol, check later.
     
     @State private var image: UIImage? = nil
     @State private var isLoading = false
@@ -35,7 +35,7 @@ struct CachedAsyncImage: View {
     
     private func loadImage() async {
         // 1. Check Cache (Instant load)
-        if let cached = cacheManager.image(for: url) {
+        if let cached = cacheManager.image(for: url.absoluteString) {
             self.image = cached
             return
         }
@@ -46,7 +46,7 @@ struct CachedAsyncImage: View {
             let (data, _) = try await URLSession.shared.data(from: url)
             if let downloadedImage = UIImage(data: data) {
                 // 3. Save to Cache
-                cacheManager.insertImage(downloadedImage, for: url)
+                cacheManager.saveImage(downloadedImage, for: url.absoluteString)
                 self.image = downloadedImage
             }
         } catch {

@@ -24,7 +24,11 @@ struct AppRootView: View {
                 }
                 
                 Tab(AppCoordinator.Tabs.checkout.rawValue, systemImage: "cart", value: .checkout) {
-                    
+                    let repository = DIContainer.shared.makeCartRepository()
+                    let viewModel = CartSummeryVM(cart: Cart(id: "", item: [], timeStamp: Date()),
+                                                  getCartUseCase: GetCartUseCase(repository),
+                                                  updateCartItemUseCase: UpdateCartItemUseCase(repository: repository))
+                    CartSummeryView(viewModel: viewModel)
                 }
                 
                 Tab(AppCoordinator.Tabs.profile.rawValue, systemImage: "person", value: .profile) {

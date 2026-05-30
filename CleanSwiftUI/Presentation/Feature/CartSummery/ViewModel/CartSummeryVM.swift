@@ -10,7 +10,7 @@ import SwiftUI
 
 @Observable
 class CartSummeryVM {
-    var cart: Cart = Cart()
+    var cart: Cart
     @ObservationIgnored
     private let getCartUseCase: GetCartUseCase
     @ObservationIgnored
@@ -27,11 +27,26 @@ class CartSummeryVM {
         // initiate Cart
         Task {
             do {
-                let cart = try await getCartUseCase.execute()
-                self.cart = cart
+                let stream = getCartUseCase.execute()
+                for try await cart in stream {
+                    self.cart = cart
+                }
             } catch {
                 // Handle error.
             }
+        }
+    }
+    
+    func updateCartItem(item: CartItem, isAdded: Bool) {
+        if isAdded {
+            item.count += 1
+        } else {
+            // update and swiftui redraw if full cart replaced with new cart
+//            if item.count == 0 {
+//
+//            }
+            
+            item.count -= 1
         }
     }
 }
