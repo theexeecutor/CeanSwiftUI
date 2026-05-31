@@ -1,0 +1,112 @@
+[
+    {
+        "id": "P001",
+        "title": "Wireless Bluetooth Headphones",
+        "images": [
+            "https://example.com/images/headphones-1.jpg",
+            "https://example.com/images/headphones-2.jpg"
+        ],
+        "description": "Over-ear wireless headphones with active noise cancellation and 30-hour battery life.",
+        "price": 99.99,
+        "discount": 15
+    },
+    {
+        "id": "P002",
+        "title": "Smart Fitness Watch",
+        "images": [
+            "https://example.com/images/watch-1.jpg",
+            "https://example.com/images/watch-2.jpg"
+        ],
+        "description": "Fitness tracker with heart rate monitoring, GPS, and sleep analysis.",
+        "price": 149.99,
+        "discount": 10
+    },
+    {
+        "id": "P003",
+        "title": "Portable Bluetooth Speaker",
+        "images": [
+            "https://example.com/images/speaker-1.jpg",
+            "https://example.com/images/speaker-2.jpg"
+        ],
+        "description": "Compact waterproof speaker with deep bass and 12-hour playback time.",
+        "price": 59.99,
+        "discount": 20
+    },
+    {
+        "id": "P004",
+        "title": "Mechanical Gaming Keyboard",
+        "images": [
+            "https://example.com/images/keyboard-1.jpg",
+            "https://example.com/images/keyboard-2.jpg"
+        ],
+        "description": "RGB mechanical keyboard with blue switches and customizable lighting effects.",
+        "price": 89.99,
+        "discount": 5
+    },
+    {
+        "id": "P005",
+        "title": "4K Ultra HD Monitor",
+        "images": [
+            "https://example.com/images/monitor-1.jpg",
+            "https://example.com/images/monitor-2.jpg"
+        ],
+        "description": "27-inch 4K monitor with HDR support and ultra-thin bezels.",
+        "price": 329.99,
+        "discount": 12
+    },
+    {
+        "id": "P006",
+        "title": "USB-C Laptop Dock",
+        "images": [
+            "https://example.com/images/dock-1.jpg",
+            "https://example.com/images/dock-2.jpg"
+        ],
+        "description": "Multi-port docking station with HDMI, Ethernet, USB 3.0, and power delivery.",
+        "price": 79.99,
+        "discount": 8
+    },
+    {
+        "id": "P007",
+        "title": "Wireless Charging Pad",
+        "images": [
+            "https://example.com/images/charger-1.jpg",
+            "https://example.com/images/charger-2.jpg"
+        ],
+        "description": "Fast wireless charging pad compatible with Qi-enabled devices.",
+        "price": 29.99,
+        "discount": 25
+    },
+    {
+        "id": "P008",
+        "title": "Action Camera",
+        "images": [
+            "https://example.com/images/camera-1.jpg",
+            "https://example.com/images/camera-2.jpg"
+        ],
+        "description": "4K action camera with image stabilization and waterproof housing.",
+        "price": 199.99,
+        "discount": 18
+    },
+    {
+        "id": "P009",
+        "title": "Ergonomic Office Chair",
+        "images": [
+            "https://example.com/images/chair-1.jpg",
+            "https://example.com/images/chair-2.jpg"
+        ],
+        "description": "Adjustable ergonomic chair with lumbar support and breathable mesh back.",
+        "price": 249.99,
+        "discount": 10
+    },
+    {
+        "id": "P010",
+        "title": "External SSD 1TB",
+        "images": [
+            "https://example.com/images/ssd-1.jpg",
+            "https://example.com/images/ssd-2.jpg"
+        ],
+        "description": "High-speed portable SSD with USB-C connectivity and 1TB storage capacity.",
+        "price": 129.99,
+        "discount": 22
+    }
+]

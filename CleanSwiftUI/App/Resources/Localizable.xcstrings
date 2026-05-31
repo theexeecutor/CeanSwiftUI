@@ -1,7 +1,19 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "Hello, World!" : {
+    "" : {
+
+    },
+    "Description: " : {
+
+    },
+    "Discount: " : {
+
+    },
+    "Price: " : {
+
+    },
+    "Title: " : {
 
     }
   },

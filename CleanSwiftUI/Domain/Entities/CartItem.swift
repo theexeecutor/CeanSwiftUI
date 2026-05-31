@@ -18,3 +18,14 @@ class CartItem: Identifiable {
         self.count = count
     }
 }
+
+extension CartItem: Hashable {
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func ==(lhs: CartItem, rhs: CartItem) -> Bool {
+        return lhs.id == rhs.id
+    }
+}

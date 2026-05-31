@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 
 // Note -
@@ -15,6 +16,8 @@ import Combine
 class DIContainer: ObservableObject {
     private init() { }
     static let shared: DIContainer = DIContainer()
+    
+    let client: NetworkEngine = APIClient()
     
     func makeAppCoordinator() -> AppCoordinator {
         
@@ -30,6 +33,31 @@ class DIContainer: ObservableObject {
         let coredata = CoreDataStorage()
         let local = CartLocalDataSourceImpl(localDatabase: coredata)
         return CartRepositoryImpl(remoteDataSource: remote, localDataSource: local)
+    }
+    
+    func makeProductListRepository() -> ProductListRepository {
+        let remote = MockProductListRemoteDataSource() // ProductListRemoteDataSourceImpl(apiClient: client)
+        let coredata = CoreDataStorage()
+        let local = ProductListLocalDataSourceImpl(localDB: coredata)
+        return ProductListRepositoryImpl(localDataSource: local, remoteDataSource: remote)
+    }
+    
+    func makeGetCartUseCase() -> GetCartUseCase {
+        GetCartUseCase(makeCartRepository())
+    }
+    
+    func makeUpdateCartUseCase() -> UpdateCartItemUseCase {
+        UpdateCartItemUseCase(repository: makeCartRepository())
+    }
+    
+    func makeCartSummeryVM() -> CartSummeryVM {
+        CartSummeryVM(cart: Cart(id: "initial", item: [], timeStamp: Date()), getCartUseCase: makeGetCartUseCase(), updateCartItemUseCase: makeUpdateCartUseCase())
+    }
+    
+    func makeProductListViewModel() -> ProductListVM {
+        let usecase = GetProductsUseCase(repository: makeProductListRepository())
+        let viewModel = ProductListVM(useCase: usecase, getCartUseCase: makeGetCartUseCase(), updateCartItemUseCase: makeUpdateCartUseCase())
+        return viewModel
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 
 @Observable
@@ -47,6 +48,10 @@ class CartSummeryVM {
 //            }
             
             item.count -= 1
+        }
+        Task {
+            let cart = try await updateCartItemUseCase.execute(item)
+            // is it required to update cart?
         }
     }
 }

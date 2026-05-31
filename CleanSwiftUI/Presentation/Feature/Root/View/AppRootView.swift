@@ -16,7 +16,8 @@ struct AppRootView: View {
             TabView(selection: $router.selectedTab) {
                 Tab(AppCoordinator.Tabs.home.rawValue,
                     systemImage: "house", value: .home) {
-                    
+                    let vm = DIContainer.shared.makeProductListViewModel()
+                    ProductListView(viewModel: vm)
                 }
                 
                 Tab(AppCoordinator.Tabs.search.rawValue, systemImage: "magnifyingglass", value: .search) {
@@ -24,10 +25,7 @@ struct AppRootView: View {
                 }
                 
                 Tab(AppCoordinator.Tabs.checkout.rawValue, systemImage: "cart", value: .checkout) {
-                    let repository = DIContainer.shared.makeCartRepository()
-                    let viewModel = CartSummeryVM(cart: Cart(id: "", item: [], timeStamp: Date()),
-                                                  getCartUseCase: GetCartUseCase(repository),
-                                                  updateCartItemUseCase: UpdateCartItemUseCase(repository: repository))
+                    let viewModel = DIContainer.shared.makeCartSummeryVM()
                     CartSummeryView(viewModel: viewModel)
                 }
                 

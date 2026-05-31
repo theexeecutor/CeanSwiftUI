@@ -28,7 +28,7 @@ final class CartRepositoryImpl: CartRepository {
                     continuation.yield(cart!)
                 }
                 
-                var remoteCart = try await remoteDataSource.getCart()
+                let remoteCart = try await remoteDataSource.getCart()
                 // compare and update the cart
                 let updatedCart = mergeCart(remoteCart, cart)
                 

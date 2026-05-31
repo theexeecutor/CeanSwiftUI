@@ -1,5 +1,5 @@
 //
-//  LocalProductRepository.swift
+//  ProductListLocalDataSource.swift
 //  CleanSwiftUI
 //
 //  Created by Bhabani Shankar on 23/05/26.
@@ -8,11 +8,11 @@
 import Foundation
 
 
-protocol ProductLocalDataSource {
+protocol ProductListLocalDataSource {
     func fetchProducts(criteria: ProductFilterCriteria) async throws -> [Product]
 }
 
-struct ProductLocalDataSourceImpl: ProductLocalDataSource {
+struct ProductListLocalDataSourceImpl: ProductListLocalDataSource {
     let localDB: DatabaseService
     
     func fetchProducts(criteria: ProductFilterCriteria) async throws -> [Product] {

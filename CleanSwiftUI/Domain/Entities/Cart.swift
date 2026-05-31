@@ -9,7 +9,7 @@ import Foundation
 
 class Cart: Identifiable {
     var id: String = UUID().uuidString
-    var item: [CartItem] = []
+    var items: [CartItem] = []
     var timeStamp: Date = Date()
     // create timestamp
     // update timestamp
@@ -17,7 +17,7 @@ class Cart: Identifiable {
     
     init(id: String, item: [CartItem], timeStamp: Date) {
         self.id = id
-        self.item = item
+        self.items = item
         self.timeStamp = timeStamp
     }
 }

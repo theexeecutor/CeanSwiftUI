@@ -58,10 +58,10 @@
 		FD478F8D2FC0DDEA0095D061 /* TransactionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F8C2FC0DDEA0095D061 /* TransactionDTO.swift */; };
 		FD478F8F2FC0DEC30095D061 /* GetProductsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F8E2FC0DEC30095D061 /* GetProductsUseCase.swift */; };
 		FD478F912FC0DF4B0095D061 /* UpdateCartItemUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F902FC0DF4B0095D061 /* UpdateCartItemUseCase.swift */; };
-		FD478F942FC0E01A0095D061 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F932FC0E01A0095D061 /* ProductRepository.swift */; };
+		FD478F942FC0E01A0095D061 /* ProductListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F932FC0E01A0095D061 /* ProductListRepository.swift */; };
 		FD478F992FC0E57F0095D061 /* ProductFilterCriteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F982FC0E57F0095D061 /* ProductFilterCriteria.swift */; };
-		FD478F9B2FC0E7730095D061 /* ListProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F9A2FC0E7730095D061 /* ListProductRepository.swift */; };
-		FD478F9D2FC0E7D60095D061 /* ProductRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F9C2FC0E7D60095D061 /* ProductRemoteDataSource.swift */; };
+		FD478F9B2FC0E7730095D061 /* ProductListRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F9A2FC0E7730095D061 /* ProductListRepositoryImpl.swift */; };
+		FD478F9D2FC0E7D60095D061 /* ProductListRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F9C2FC0E7D60095D061 /* ProductListRemoteDataSource.swift */; };
 		FD478F9F2FC0E7E60095D061 /* ProductLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478F9E2FC0E7E60095D061 /* ProductLocalDataSource.swift */; };
 		FD478FA22FC1B69C0095D061 /* DefaultLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FA12FC1B69C0095D061 /* DefaultLogger.swift */; };
 		FD478FA42FC1B7980095D061 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD478FA32FC1B7980095D061 /* PaymentView.swift */; };
@@ -94,6 +94,7 @@
 		FDEAEC492FC6272A0016CCB8 /* CartRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC482FC6272A0016CCB8 /* CartRepositoryImpl.swift */; };
 		FDEAEC4B2FCB0D040016CCB8 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC4A2FCB0D040016CCB8 /* ProductListView.swift */; };
 		FDEAEC4D2FCB0D130016CCB8 /* ProductListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAEC4C2FCB0D130016CCB8 /* ProductListVM.swift */; };
+		FDEAEC4F2FCC78250016CCB8 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = FDEAEC4E2FCC781D0016CCB8 /* Products.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,10 +169,10 @@
 		FD478F8C2FC0DDEA0095D061 /* TransactionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDTO.swift; sourceTree = "<group>"; };
 		FD478F8E2FC0DEC30095D061 /* GetProductsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProductsUseCase.swift; sourceTree = "<group>"; };
 		FD478F902FC0DF4B0095D061 /* UpdateCartItemUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCartItemUseCase.swift; sourceTree = "<group>"; };
-		FD478F932FC0E01A0095D061 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		FD478F932FC0E01A0095D061 /* ProductListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepository.swift; sourceTree = "<group>"; };
 		FD478F982FC0E57F0095D061 /* ProductFilterCriteria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterCriteria.swift; sourceTree = "<group>"; };
-		FD478F9A2FC0E7730095D061 /* ListProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductRepository.swift; sourceTree = "<group>"; };
-		FD478F9C2FC0E7D60095D061 /* ProductRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSource.swift; sourceTree = "<group>"; };
+		FD478F9A2FC0E7730095D061 /* ProductListRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepositoryImpl.swift; sourceTree = "<group>"; };
+		FD478F9C2FC0E7D60095D061 /* ProductListRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRemoteDataSource.swift; sourceTree = "<group>"; };
 		FD478F9E2FC0E7E60095D061 /* ProductLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalDataSource.swift; sourceTree = "<group>"; };
 		FD478FA12FC1B69C0095D061 /* DefaultLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLogger.swift; sourceTree = "<group>"; };
 		FD478FA32FC1B7980095D061 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
@@ -204,6 +205,7 @@
 		FDEAEC482FC6272A0016CCB8 /* CartRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRepositoryImpl.swift; sourceTree = "<group>"; };
 		FDEAEC4A2FCB0D040016CCB8 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		FDEAEC4C2FCB0D130016CCB8 /* ProductListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListVM.swift; sourceTree = "<group>"; };
+		FDEAEC4E2FCC781D0016CCB8 /* Products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,7 +537,7 @@
 		FD478F432FC03D3F0095D061 /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F9A2FC0E7730095D061 /* ListProductRepository.swift */,
+				FD478F9A2FC0E7730095D061 /* ProductListRepositoryImpl.swift */,
 				FDEAEC482FC6272A0016CCB8 /* CartRepositoryImpl.swift */,
 			);
 			path = RepositoryImpl;
@@ -654,7 +656,7 @@
 		FD478F532FC04A300095D061 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F932FC0E01A0095D061 /* ProductRepository.swift */,
+				FD478F932FC0E01A0095D061 /* ProductListRepository.swift */,
 				FD478FAE2FC1C15B0095D061 /* CartRepository.swift */,
 			);
 			path = Repositories;
@@ -746,7 +748,7 @@
 		FD478F962FC0E2E80095D061 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				FD478F9C2FC0E7D60095D061 /* ProductRemoteDataSource.swift */,
+				FD478F9C2FC0E7D60095D061 /* ProductListRemoteDataSource.swift */,
 				FD478FB42FC223A50095D061 /* CartRemoteDataSource.swift */,
 			);
 			path = Remote;
@@ -922,6 +924,7 @@
 		FD478FDB2FC575A90095D061 /* Jsons */ = {
 			isa = PBXGroup;
 			children = (
+				FDEAEC4E2FCC781D0016CCB8 /* Products.json */,
 				FD478F172FBFBB3A0095D061 /* preview.json */,
 			);
 			path = Jsons;
@@ -1043,6 +1046,7 @@
 				FD478F1C2FBFBC4F0095D061 /* Funky Glitz.ttf in Resources */,
 				FD478F182FBFBB3A0095D061 /* preview.json in Resources */,
 				FD478EF52FBF9BF40095D061 /* Assets.xcassets in Resources */,
+				FDEAEC4F2FCC78250016CCB8 /* Products.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1090,7 +1094,7 @@
 				FD478FB12FC1C84D0095D061 /* GetCartEndpoint.swift in Sources */,
 				FD478F072FBF9F300095D061 /* AppDelegate.swift in Sources */,
 				FD478FD42FC451F40095D061 /* FeatureConfiguration.swift in Sources */,
-				FD478F942FC0E01A0095D061 /* ProductRepository.swift in Sources */,
+				FD478F942FC0E01A0095D061 /* ProductListRepository.swift in Sources */,
 				FD478F352FC039580095D061 /* PaymentGateway.swift in Sources */,
 				FD478F6D2FC055350095D061 /* CartItem.swift in Sources */,
 				FD478FBD2FC3272C0095D061 /* CheckoutState.swift in Sources */,
@@ -1123,7 +1127,7 @@
 				FD478F312FBFC0BB0095D061 /* AppRootView.swift in Sources */,
 				FD478F512FC040EF0095D061 /* ImageCacheManager.swift in Sources */,
 				FD478F632FC052EE0095D061 /* CardStyleModifier.swift in Sources */,
-				FD478F9D2FC0E7D60095D061 /* ProductRemoteDataSource.swift in Sources */,
+				FD478F9D2FC0E7D60095D061 /* ProductListRemoteDataSource.swift in Sources */,
 				FD478FC32FC34E810095D061 /* UIErrorPresentable.swift in Sources */,
 				FD478F772FC06AF50095D061 /* UserSessionManager.swift in Sources */,
 				FD478F402FC03BA00095D061 /* LoggerService.swift in Sources */,
@@ -1140,7 +1144,7 @@
 				FD478F422FC03D270095D061 /* AnalyticsEngine.swift in Sources */,
 				FD478F612FC052880095D061 /* FirebaseAnalyticsEngine.swift in Sources */,
 				FD478F222FBFBD080095D061 /* MyInputField.swift in Sources */,
-				FD478F9B2FC0E7730095D061 /* ListProductRepository.swift in Sources */,
+				FD478F9B2FC0E7730095D061 /* ProductListRepositoryImpl.swift in Sources */,
 				FD478F552FC04B120095D061 /* Constants.swift in Sources */,
 				FD478FAD2FC1C1060095D061 /* GetCartUseCase.swift in Sources */,
 				FD478F742FC067A30095D061 /* AppUIState.swift in Sources */,
