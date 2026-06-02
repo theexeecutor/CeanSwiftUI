@@ -16,7 +16,10 @@ protocol CartLocalDataSource {
 
 
 final class CartLocalDataSourceImpl: CartLocalDataSource {
-    let localDatabase: any DatabaseService
+    private let localDatabase: any DatabaseService
+    lazy var context: NSManagedObjectContext = {
+        localDatabase.context as! NSManagedObjectContext
+    }()
     
     init(localDatabase: any DatabaseService) {
         self.localDatabase = localDatabase
@@ -43,18 +46,17 @@ final class CartLocalDataSourceImpl: CartLocalDataSource {
                     first.count = Int16(item.count)
                 }
             } else {
-                let entity = CartItemEntity()
-                let product = ProductEntity()
+                let cartItem = CartItemEntity(context: context)
+                let product = ProductEntity(context: context)
                 product.id = item.product.id
                 product.title = item.product.title
                 product.price = NSDecimalNumber(decimal: item.product.price)
-                try await localDatabase.save(product)
-                entity.id = item.id
-                entity.product = product
-                entity.count = Int16(item.count)
-                try await localDatabase.save(entity)
-                cart.addToCartItems(entity)
+                cartItem.id = item.id
+                cartItem.product = product
+                cartItem.count = Int16(item.count)
+                cart.addToCartItems(cartItem)
                 items = cart.cartItems?.allObjects as! [CartItemEntity]
+                try await localDatabase.save(cartItem)
             }
             
             return Cart(id: cart.id, item: items.map({ $0.toEntity() }), timeStamp: cart.timeStamp)
@@ -69,8 +71,7 @@ final class CartLocalDataSourceImpl: CartLocalDataSource {
         if let first = cart.first {
             return first
         }
-        
-        let cartEntity = CartEntity()
+        let cartEntity = CartEntity(context: context)
         cartEntity.id = UUID().uuidString
         cartEntity.timeStamp = Date()
         

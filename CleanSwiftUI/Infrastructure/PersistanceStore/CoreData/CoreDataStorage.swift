@@ -13,11 +13,13 @@ final class CoreDataStorage: DatabaseService {
         self.coreDataStack = coreDataStack
     }
     
+    var context: AnyObject? {
+        coreDataStack.context
+    }
+    
     // add parameter for merge policy
     func save<T: Persistable>(_ object: T) async throws {
         guard let object = object as? NSManagedObject else { throw DatabaseError.modelError }
-        if object.managedObjectContext == nil {
-            coreDataStack.context.insert(object) }
         let context = object.managedObjectContext ?? coreDataStack.context
         do {
             try context.save()

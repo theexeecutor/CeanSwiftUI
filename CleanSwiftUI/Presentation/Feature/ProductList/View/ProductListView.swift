@@ -37,15 +37,17 @@ struct ProductListView: View {
                     HStack {
                         Group {
                             Button {
-                                
+                                viewModel.update(product: product.wrappedValue, isAdded: false)
                             } label: {
                                 Image(systemName: "minus.circle.fill")
                             }
                             
-                            Text("")
+                            if let count = viewModel.itemCounts[product.id] {
+                                Text("\(count)")
+                            }
                             
                             Button {
-                                
+                                viewModel.update(product: product.wrappedValue, isAdded: true)
                             } label: {
                                 Image(systemName: "plus.circle.fill")
                             }
@@ -57,10 +59,10 @@ struct ProductListView: View {
                 }
                 .buttonStyle(.plain)
             }
-            
         }
         .task {
             viewModel.fetchProducts()
+            viewModel.fetchCart()
         }
     }
 }

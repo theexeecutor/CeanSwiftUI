@@ -12,6 +12,8 @@ protocol Persistable: NSObject {
 }
 
 protocol DatabaseService {
+    var context: AnyObject? { get }
+    
     func save<T: Persistable>(_ object: T) async throws
     @available(iOS 17, *)
     func fetchAll<T: Persistable>(predicate: Predicate<T>?) async throws -> [T]

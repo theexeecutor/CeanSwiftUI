@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 
 @Observable
@@ -55,9 +56,17 @@ class ProductListVM {
             itemCounts[product.id, default: 0] -= 1
         }
         
-        let cartItem = CartItem(id: product.id, product: product, count: itemCounts[product.id]!)
+        if itemCounts[product.id]! == 0 {
+            itemCounts[product.id] = nil
+        }
+        
+        let cartItem = CartItem(id: product.id, product: product, count: itemCounts[product.id] ?? 0)
         Task {
-            try await updateCartItemUseCase.execute(cartItem)
+            do {
+                let _ = try await updateCartItemUseCase.execute(cartItem)
+            } catch {
+                print(error)
+            }
         }
     }
 }

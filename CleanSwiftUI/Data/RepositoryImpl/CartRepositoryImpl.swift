@@ -52,11 +52,12 @@ final class CartRepositoryImpl: CartRepository {
     private func mergeCart(_ remote: Cart, _ local: Cart?) -> Cart {
         guard let local = local else { return remote }
         // Complex logic can be implemented here.
-        if remote.timeStamp < local.timeStamp {
-            return local
-        } else {
-            return remote
-        }
+//        if remote.timeStamp < local.timeStamp {
+//            return local
+//        } else {
+//            return remote
+//        }
+        return local
     }
     
 }

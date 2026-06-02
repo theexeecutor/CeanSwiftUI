@@ -1,13 +1,16 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
+    "%lld" : {
 
     },
     "Description: " : {
 
     },
     "Discount: " : {
+
+    },
+    "Practice" : {
 
     },
     "Price: " : {

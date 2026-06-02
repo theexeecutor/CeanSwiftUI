@@ -11,9 +11,7 @@ import Foundation
 struct UpdateCartItemUseCase {
     let repository: CartRepository
     
-    func execute(_ cart: CartItem) async throws -> Cart {
-        
-        
-        return Cart(id: "", item: [], timeStamp: Date())
+    func execute(_ item: CartItem) async throws -> Cart {
+        return try await repository.updateCartItem(item)
     }
 }
