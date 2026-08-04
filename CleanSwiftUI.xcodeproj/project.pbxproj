@@ -194,6 +194,7 @@
 		FD478FD32FC451F40095D061 /* FeatureConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureConfiguration.swift; sourceTree = "<group>"; };
 		FD478FD62FC4550C0095D061 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
 		FD4790002FC5D3D50095D061 /* CoreDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStorage.swift; sourceTree = "<group>"; };
+		FDE346192FDE898C00C97AE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FDEAEC382FC61B4A0016CCB8 /* CartEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FDEAEC392FC61B4A0016CCB8 /* CartEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FDEAEC3A2FC61B4A0016CCB8 /* CartItemEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CartItemEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -256,6 +257,7 @@
 		FD478EF32FBF9BF40095D061 /* CleanSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				FDE346192FDE898C00C97AE8 /* Info.plist */,
 				FD478F022FBF9E320095D061 /* App */,
 				FD478F152FBFBAC70095D061 /* Core */,
 				FD478F262FBFBF080095D061 /* Infrastructure */,
@@ -1319,6 +1321,7 @@
 				DEVELOPMENT_TEAM = ASQ83N75JS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CleanSwiftUI/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow to use photo library for App Uses";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1353,6 +1356,7 @@
 				DEVELOPMENT_TEAM = ASQ83N75JS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CleanSwiftUI/Info.plist;
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allow to use photo library for App Uses";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

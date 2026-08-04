@@ -26,6 +26,9 @@ struct CleanSwiftUIApp: App {
             AppRootView(session: container.makeUserSession())
                 .environmentObject(router)
                 .environmentObject(container)
+                .onOpenURL { url in // handle universal link // app url schema
+                    // handleUrl(url, router)
+                }
         }
     }
 }
