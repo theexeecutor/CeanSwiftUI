@@ -6,16 +6,17 @@
 //
 
 import SwiftUI
-import CoreData
-
 
 @Observable
 class ProductListVM {
     var products: [Product]
     var itemCounts: [String: Int] = [:]
+    
     @ObservationIgnored
     private let getProductsUseCase: GetProductsUseCase
+    @ObservationIgnored
     private let getCartUseCase: GetCartUseCase
+    @ObservationIgnored
     private let updateCartItemUseCase: UpdateCartItemUseCase
     
     init(products: [Product] = [],
@@ -31,7 +32,7 @@ class ProductListVM {
     func fetchProducts() {
         Task {
             do {
-                let products = try await getProductsUseCase.repository.fetchProducts(criteria: ProductFilterCriteria(region: "in", isTrending: true))
+                let products = try await getProductsUseCase.execute(criteria: ProductFilterCriteria(region: "in", isTrending: true))
                 self.products = products
             } catch {
                 // Handle error

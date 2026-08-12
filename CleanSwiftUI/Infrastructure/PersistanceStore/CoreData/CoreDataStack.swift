@@ -17,6 +17,18 @@ final class CoreDataStack {
     
     init(isInMemory: Bool) {
         let instance = NSPersistentContainer(name: "CleanSwiftUI")
+        let storeDescription = instance.persistentStoreDescriptions.first!
+        
+        // Set Fileprotect for secure storage.
+        storeDescription.setOption(FileProtectionType.completeUntilFirstUserAuthentication as NSObject, forKey: NSPersistentStoreFileProtectionKey)
+        
+        /*
+        // By default
+        storeDescription.shouldMigrateStoreAutomatically = true
+        storeDescription.isReadOnly = false
+        storeDescription.shouldAddStoreAsynchronously = false // don't know
+         */
+        
         instance.loadPersistentStores { description, error in
             guard error == nil else { fatalError("Couldn't find the DataModel file") }
             

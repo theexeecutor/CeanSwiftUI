@@ -22,7 +22,9 @@ final class CoreDataStorage: DatabaseService {
         guard let object = object as? NSManagedObject else { throw DatabaseError.modelError }
         let context = object.managedObjectContext ?? coreDataStack.context
         do {
-            try context.save()
+            if context.hasChanges { // Check if there is uncommited changes
+                try context.save()
+            }
         } catch {
             let userInfo = (error as NSError).userInfo
             // handling merge conflicts

@@ -8,7 +8,7 @@
 import Foundation
 
 struct GetProductsUseCase {
-    let repository: ProductListRepository
+    private let repository: ProductListRepository
     
     func execute(criteria: ProductFilterCriteria) async throws -> [Product] {
         try await repository.fetchProducts(criteria: criteria)
